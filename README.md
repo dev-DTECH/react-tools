@@ -1,10 +1,10 @@
-# react-tools
+# reactor-tools
 
 A collection of useful React hooks for state persistence and UI enhancements.
 
-📦 **NPM Package:** [react-tools on npm](https://www.npmjs.com/package/react-tools)
+📦 **NPM Package:** [reactor-tools on npm](https://www.npmjs.com/package/reactor-tools)
 
-📖 **Documentation:** [react-tools Docs](./)
+📖 **Documentation:** [reactor-tools Docs](./)
 
 ## **Features**
 - 🚀 **State Persistence**: Maintain UI state across page reloads and sessions effortlessly.
@@ -13,12 +13,12 @@ A collection of useful React hooks for state persistence and UI enhancements.
 
 ## **Installation**
 ```sh
-npm install react-tools
+npm install reactor-tools
 ```
 
 or with Yarn:
 ```sh
-yarn add react-tools
+yarn add reactor-tools
 ```
 
 ## **Hooks Included**
@@ -31,7 +31,7 @@ Syncs component state with `localStorage`, ensuring data retention even after th
 
 ## **Usage Example**
 ```tsx
-import { useParamState, useLocalStorageState } from "react-tools";
+import { useParamState, useLocalStorageState } from "reactor-tools";
 
 function App() {
     const [query, setQuery] = useParamState({ search: "" });
