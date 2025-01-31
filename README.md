@@ -1,41 +1,58 @@
-# Website
+# react-tools
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+A collection of useful React hooks for state persistence and UI enhancements.
 
-### Installation
+📦 **NPM Package:** [react-tools on npm](https://www.npmjs.com/package/react-tools)
 
-```
-$ yarn
-```
+📖 **Documentation:** [react-tools Docs](./)
 
-### Local Development
+## **Features**
+- 🚀 **State Persistence**: Maintain UI state across page reloads and sessions effortlessly.
+- 🌍 **Sharable URLs**: Store state in URL parameters for easy sharing and deep-linking.
+- 🔥 **Lightweight & Easy to Use**: Minimal dependencies and straightforward APIs.
 
-```
-$ yarn start
-```
-
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-### Build
-
-```
-$ yarn build
+## **Installation**
+```sh
+npm install react-tools
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
-
-### Deployment
-
-Using SSH:
-
-```
-$ USE_SSH=true yarn deploy
+or with Yarn:
+```sh
+yarn add react-tools
 ```
 
-Not using SSH:
+## **Hooks Included**
 
-```
-$ GIT_USER=<Your GitHub username> yarn deploy
+### [`useParamState`](./use_param_state_hook)
+Synchronizes component state with URL parameters, allowing state persistence across page reloads and shareable application states.
+
+### [`useLocalStorageState`](./use_local_storage_state_hook)
+Syncs component state with `localStorage`, ensuring data retention even after the user closes the browser.
+
+## **Usage Example**
+```tsx
+import { useParamState, useLocalStorageState } from "react-tools";
+
+function App() {
+    const [query, setQuery] = useParamState({ search: "" });
+    const [theme, setTheme] = useLocalStorageState({ theme: "light" });
+
+    return (
+        <div style={{ background: theme.theme === "dark" ? "#333" : "#fff", color: theme.theme === "dark" ? "#fff" : "#000" }}>
+            <input
+                type="text"
+                value={query.search}
+                onChange={(e) => setQuery({ search: e.target.value })}
+                placeholder="Search..."
+            />
+            <button onClick={() => setTheme({ theme: theme.theme === "light" ? "dark" : "light" })}>Toggle Theme</button>
+        </div>
+    );
+}
 ```
 
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+## **Contributing**
+Contributions are welcome! Feel free to open an issue or submit a pull request.
+
+## **License**
+MIT
