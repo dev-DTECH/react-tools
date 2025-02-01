@@ -1,4 +1,5 @@
 ---
+slug: /
 title: "reactor-tools"
 description: "A collection of useful React hooks for state persistence and UI enhancements."
 ---
@@ -16,10 +17,10 @@ description: "A collection of useful React hooks for state persistence and UI en
 
 ## **Hooks Included**
 
-### [`useParamState`](./use_param_state_hook)
+### [`useParamState`](./hooks/use-param-state)
 Synchronizes component state with URL parameters, allowing state persistence across page reloads and shareable application states.
 
-### [`useLocalStorageState`](./use_local_storage_state_hook)
+### [`useLocalStorageState`](./hooks/use-local-storage-state)
 Syncs component state with `localStorage`, ensuring data retention even after the user closes the browser.
 
 ## **Installation**
