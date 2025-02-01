@@ -23,7 +23,7 @@ jobs:
       - name: Install dependencies
         run: npm ci
       - name: Build website
-        run: npm build:docs
+        run: npm run build:docs
 
       - name: Upload Build Artifact
         uses: actions/upload-pages-artifact@v3
