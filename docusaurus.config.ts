@@ -40,8 +40,8 @@ const config: Config = {
           routeBasePath: '/',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: false,
         theme: {
@@ -69,7 +69,7 @@ const config: Config = {
         // },
         // {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          href: 'https://github.com/dev-DTECH/react-tools/',
           label: 'GitHub',
           position: 'right',
         },
@@ -78,31 +78,31 @@ const config: Config = {
     footer: {
       style: 'dark',
       links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
+        // {
+        //   title: 'Docs',
+        //   items: [
+        //     {
+        //       label: 'Tutorial',
+        //       to: '/docs/intro',
+        //     },
+        //   ],
+        // },
         {
           title: 'Community',
           items: [
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'http://discord.gg/wAmXsm62BW',
             },
           ],
         },
         {
           title: 'More',
           items: [
-            {
-              label: 'Blog',
-              to: '/blog',
-            },
+            // {
+            //   label: 'Blog',
+            //   to: '/blog',
+            // },
             {
               label: 'GitHub',
               href: 'https://github.com/dev-DTECH/react-tools/',
