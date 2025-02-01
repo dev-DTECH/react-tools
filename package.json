@@ -10,7 +10,6 @@
   ],
   "scripts": {
     "build": "tsup",
-    "publish": "npm publish",
     "start:docs": "docusaurus start",
     "build:docs": "docusaurus build",
     "swizzle": "docusaurus swizzle",
