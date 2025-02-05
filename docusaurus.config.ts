@@ -10,7 +10,7 @@ const config: Config = {
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://docs.reactor-tools.devdt.in/',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -38,6 +38,18 @@ const config: Config = {
         docs: {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/',
+          async sidebarItemsGenerator({
+            defaultSidebarItemsGenerator,
+            ...args
+          }) {
+            const sidebarItems = await defaultSidebarItemsGenerator(args);
+
+            const order = ["index","hooks", "example"]
+            sidebarItems.sort((a: any,b: any) => order.indexOf(a.id ?? a.label) - order.indexOf(b.id ?? b.label));
+            // console.log(sidebarItems.sort(a,b => a.label.localeCompare(b.label)));
+            // Example: return an hardcoded list of static sidebar items
+            return sidebarItems;
+          },
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           // editUrl:
@@ -65,9 +77,9 @@ const config: Config = {
         //   type: 'docSidebar',
         //   sidebarId: 'tutorialSidebar',
         //   position: 'left',
-        //   label: 'Tutorial',
+        //   label: 'Example',
         // },
-        // {to: '/blog', label: 'Blog', position: 'left'},
+        {to: '/playground', label: 'Playground', position: 'left'},
         {
           href: 'https://github.com/dev-DTECH/react-tools/',
           label: 'GitHub',
